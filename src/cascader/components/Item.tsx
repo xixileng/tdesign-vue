@@ -128,6 +128,9 @@ export default defineComponent({
           e.stopPropagation();
           this.onMouseenter();
         }}
+        onMousedown={(e: Event) => {
+          e.preventDefault();
+        }}
       >
         {cascaderContext.multiple ? RenderCheckBox(node, cascaderContext) : RenderLabelContent(node, cascaderContext)}
         {node.children

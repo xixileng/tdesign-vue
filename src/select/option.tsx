@@ -99,6 +99,10 @@ export default defineComponent({
       },
     ]);
 
+    const onListMousedown = (e: MouseEvent) => {
+      e.preventDefault();
+    };
+
     const handleClick = (e: MouseEvent | KeyboardEvent) => {
       if (multiple.value || isDisabled.value) return;
       e.stopPropagation();
@@ -155,6 +159,7 @@ export default defineComponent({
       optionNode,
       tRowHeight,
       hasLazyLoadHolder,
+      onListMousedown,
       handleClick,
       handleCheckboxClick,
     };
@@ -173,6 +178,7 @@ export default defineComponent({
           class={classes}
           onMouseenter={() => mouseEvent(true)}
           onMouseleave={() => mouseEvent(false)}
+          onMousedown={this.onListMousedown}
           onClick={this.handleClick}
           v-ripple={(this.keepAnimation as any).ripple}
         >
@@ -187,6 +193,7 @@ export default defineComponent({
         class={classes}
         onMouseenter={() => mouseEvent(true)}
         onMouseleave={() => mouseEvent(false)}
+        onMousedown={this.onListMousedown}
         onClick={this.handleClick}
         v-ripple={(this.keepAnimation as any).ripple}
       >

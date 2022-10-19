@@ -77,7 +77,7 @@ export default mixins(getConfigReceiverMixins<Vue, TreeSelectConfig>('treeSelect
         `${this.classPrefix}-select-polyfill`,
         {
           [this.commonStatusClassName.disabled]: this.tDisabled,
-          [this.commonStatusClassName.active]: this.visible,
+          [this.commonStatusClassName.active]: this.focusing,
           [this.commonSizeClassName[this.size]]: this.size,
           [`${this.classPrefix}-has-prefix`]: this.prefixIconSlot,
           [`${this.classPrefix}-select-selected`]: this.selectedSingle || !isEmpty(this.selectedMultiple),
@@ -405,6 +405,9 @@ export default mixins(getConfigReceiverMixins<Vue, TreeSelectConfig>('treeSelect
     treeRerender() {
       this.treeKey += 1;
     },
+    onListMousedown(e: MouseEvent) {
+      e.preventDefault();
+    },
   },
   render(): VNode {
     const {
@@ -445,10 +448,10 @@ export default mixins(getConfigReceiverMixins<Vue, TreeSelectConfig>('treeSelect
     const searchInput = (
       <Input
         ref="input"
-        v-show={this.showFilter}
         v-model={this.filterText}
         class={`${this.classPrefix}-select__input`}
         size={this.size}
+        readonly={!this.showFilter}
         disabled={this.tDisabled}
         placeholder={this.filterPlaceholder}
         onChange={this.onInputChange}
@@ -526,9 +529,6 @@ export default mixins(getConfigReceiverMixins<Vue, TreeSelectConfig>('treeSelect
             {this.prefixIconSlot && (
               <span class={`${this.classPrefix}-select__left-icon`}>{this.prefixIconSlot[0]}</span>
             )}
-            <span v-show={this.showPlaceholder} class={`${this.classPrefix}-select__placeholder`}>
-              {this.placeholder || this.global.placeholder}
-            </span>
             <span class={`${this.classPrefix}-tree-select ${this.classPrefix}-tag-prefix`}>{tagItem}</span>
             {collapsedItem}
             {!this.multiple && !this.showPlaceholder && !this.showFilter && selectedSingle}
@@ -562,6 +562,7 @@ export default mixins(getConfigReceiverMixins<Vue, TreeSelectConfig>('treeSelect
               `${this.classPrefix}-select__dropdown-inner`,
               `${this.classPrefix}-select__dropdown-inner--size-${this.dropdownInnerSize}`,
             ]}
+            onMousedown={this.onListMousedown}
           >
             <p
               v-show={this.showLoading}

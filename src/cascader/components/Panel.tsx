@@ -33,6 +33,10 @@ export default defineComponent({
       expendClickEffect(propsTrigger, trigger, node, cascaderContext);
     };
 
+    const onPanelMousedown = (e: MouseEvent) => {
+      e.preventDefault();
+    };
+
     return {
       global,
       panels,
@@ -40,6 +44,7 @@ export default defineComponent({
       renderTNodeJSXDefault,
       COMPONENT_NAME,
       emit,
+      onPanelMousedown,
     };
   },
   render() {
@@ -107,7 +112,10 @@ export default defineComponent({
     }
 
     return (
-      <div class={[`${COMPONENT_NAME}__panel`, { [`${COMPONENT_NAME}--normal`]: panels.length && !this.loading }]}>
+      <div
+        class={[`${COMPONENT_NAME}__panel`, { [`${COMPONENT_NAME}--normal`]: panels.length && !this.loading }]}
+        onMousedown={this.onPanelMousedown}
+      >
         {content}
       </div>
     );

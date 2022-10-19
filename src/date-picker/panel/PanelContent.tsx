@@ -44,13 +44,22 @@ export default defineComponent({
 
     const defaultTimeValue = '00:00:00';
 
-    return { COMPONENT_NAME, defaultTimeValue, timeFormat };
+    const onPanelMousedown = (e: MouseEvent) => {
+      e.preventDefault();
+    };
+
+    return {
+      COMPONENT_NAME,
+      defaultTimeValue,
+      timeFormat,
+      onPanelMousedown,
+    };
   },
   render() {
     const { COMPONENT_NAME, defaultTimeValue, timeFormat } = this;
 
     return (
-      <div class={`${COMPONENT_NAME}-content`}>
+      <div class={`${COMPONENT_NAME}-content`} onMousedown={this.onPanelMousedown}>
         <div class={`${COMPONENT_NAME}-${this.mode}`}>
           <TDateHeader
             {...{
