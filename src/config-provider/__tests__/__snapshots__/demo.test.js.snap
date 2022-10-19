@@ -2560,11 +2560,6 @@ exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-      >
-        see empty data in TreeSelect
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       />
       <span
@@ -2577,17 +2572,17 @@ exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder="see empty data in TreeSelect"
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -2660,11 +2655,6 @@ exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-      >
-        see loading text in TreeSelect
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       />
       <span
@@ -2677,17 +2667,17 @@ exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder="see loading text in TreeSelect"
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -2742,12 +2732,6 @@ exports[`ConfigProvider ConfigProvider othersVue demo works fine 1`] = `
     <div
       class="t-select t-select-polyfill t-size-m t-select__popup-reference"
     >
-      <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        tree select
-      </span>
       <span
         class="t-tree-select t-tag-prefix"
       />

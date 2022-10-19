@@ -11,12 +11,6 @@ exports[`TreeSelect TreeSelect baseVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       />
       <span
@@ -113,12 +107,6 @@ exports[`TreeSelect TreeSelect collapsedVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select-selected t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       >
         <span
@@ -180,17 +168,17 @@ exports[`TreeSelect TreeSelect collapsedVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder=""
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -259,12 +247,6 @@ exports[`TreeSelect TreeSelect collapsedVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select-selected t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       >
         <span
@@ -326,17 +308,17 @@ exports[`TreeSelect TreeSelect collapsedVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder=""
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -411,12 +393,6 @@ exports[`TreeSelect TreeSelect dvalueVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select-selected t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       />
       <span
@@ -435,17 +411,17 @@ exports[`TreeSelect TreeSelect dvalueVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder="shenzhen,guangzhou"
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -569,12 +545,6 @@ exports[`TreeSelect TreeSelect filterableVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select-selected t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       />
       <span
@@ -593,17 +563,17 @@ exports[`TreeSelect TreeSelect filterableVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder="shenzhen"
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -678,11 +648,6 @@ exports[`TreeSelect TreeSelect lazyVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       />
       <span
@@ -695,17 +660,17 @@ exports[`TreeSelect TreeSelect lazyVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder="请选择"
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -780,12 +745,6 @@ exports[`TreeSelect TreeSelect multipleVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select-selected t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       >
         <span
@@ -847,17 +806,17 @@ exports[`TreeSelect TreeSelect multipleVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder=""
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -943,11 +902,6 @@ exports[`TreeSelect TreeSelect prefixVue demo works fine 1`] = `
         </svg>
       </span>
       <span
-        class="t-select__placeholder"
-      >
-        请输入
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       />
       <span
@@ -960,17 +914,17 @@ exports[`TreeSelect TreeSelect prefixVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder="请输入"
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -1045,12 +999,6 @@ exports[`TreeSelect TreeSelect propsVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select-selected t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       />
       <span
@@ -1069,17 +1017,17 @@ exports[`TreeSelect TreeSelect propsVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder="shenzhen"
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -1154,12 +1102,6 @@ exports[`TreeSelect TreeSelect valuedisplayVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select-selected t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       />
       <span
@@ -1173,17 +1115,17 @@ exports[`TreeSelect TreeSelect valuedisplayVue demo works fine 1`] = `
        () 
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder="shenzhen"
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -1251,12 +1193,6 @@ exports[`TreeSelect TreeSelect valuedisplayVue demo works fine 1`] = `
     <div
       class="t-select t-select-polyfill t-size-m t-select-selected t-select__popup-reference"
     >
-      <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
       <span
         class="t-tree-select t-tag-prefix"
       />
@@ -1354,12 +1290,6 @@ exports[`TreeSelect TreeSelect valuetypeVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select-selected t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       />
       <span
@@ -1378,17 +1308,17 @@ exports[`TreeSelect TreeSelect valuetypeVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder="[object Object]"
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>
@@ -1457,12 +1387,6 @@ exports[`TreeSelect TreeSelect valuetypeVue demo works fine 1`] = `
       class="t-select t-select-polyfill t-size-m t-select-selected t-select__popup-reference"
     >
       <span
-        class="t-select__placeholder"
-        style="display: none;"
-      >
-        请选择
-      </span>
-      <span
         class="t-tree-select t-tag-prefix"
       >
         <span
@@ -1524,17 +1448,17 @@ exports[`TreeSelect TreeSelect valuetypeVue demo works fine 1`] = `
       </span>
       <div
         class="t-input__wrap t-select__input"
-        style="display: none;"
       >
         <div
-          class="t-input t-size-m t-is-default"
+          class="t-input t-size-m t-is-default t-is-readonly"
         >
           <input
             autocomplete=""
             class="t-input__inner"
             placeholder=""
+            readonly="readonly"
             type="text"
-            unselectable="off"
+            unselectable="on"
           />
         </div>
       </div>

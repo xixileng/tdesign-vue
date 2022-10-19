@@ -1496,11 +1496,6 @@ exports[`Form Form disabledVue demo works fine 1`] = `
                 class="t-select t-select-polyfill t-size-m t-select__popup-reference"
               >
                 <span
-                  class="t-select__placeholder"
-                >
-                  请选择
-                </span>
-                <span
                   class="t-tree-select t-tag-prefix"
                 />
                 <span
@@ -1513,17 +1508,17 @@ exports[`Form Form disabledVue demo works fine 1`] = `
                 </span>
                 <div
                   class="t-input__wrap t-select__input"
-                  style="display: none;"
                 >
                   <div
-                    class="t-input t-size-m t-is-default"
+                    class="t-input t-size-m t-is-default t-is-readonly"
                   >
                     <input
                       autocomplete=""
                       class="t-input__inner"
                       placeholder=""
+                      readonly="readonly"
                       type="text"
-                      unselectable="off"
+                      unselectable="on"
                     />
                   </div>
                 </div>
@@ -6086,12 +6081,6 @@ exports[`Form Form validatorVue demo works fine 1`] = `
           <div
             class="t-select t-select-polyfill t-size-m t-select__popup-reference"
           >
-            <span
-              class="t-select__placeholder"
-              style="display: none;"
-            >
-              请选择你的兴趣爱好
-            </span>
             <span
               class="t-tree-select t-tag-prefix"
             />
