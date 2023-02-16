@@ -69,9 +69,8 @@ export default mixins(classPrefixMixins, Vue as VueConstructor<CheckboxInstance>
 
   render(): VNode {
     return (
-      <label class={this.labelClasses} title={this.$attrs.title} onClick={this.handleLabelClick}>
+      <label class={this.labelClasses} title={this.$attrs.title}>
         <input
-          ref="checkbox"
           type="checkbox"
           on={{ ...omit(this.$listeners, ['checked', 'change']) }}
           class={`${this.componentName}__former`}
@@ -82,28 +81,20 @@ export default mixins(classPrefixMixins, Vue as VueConstructor<CheckboxInstance>
           value={this.value}
           checked={this.checked$}
           onChange={this.handleChange}
-          onClick={this.handleCheckboxClick}
         ></input>
 
-        <span ref="input" class={`${this.componentName}__input`}></span>
-        <span class={`${this.componentName}__label`}>{renderContent(this, 'default', 'label')}</span>
+        <span class={`${this.componentName}__input`}></span>
+        <span class={`${this.componentName}__label`} onClick={this.handleLabelClick}>
+          {renderContent(this, 'default', 'label')}
+        </span>
       </label>
     );
   },
 
   methods: {
     handleLabelClick(e: Event) {
-      e.preventDefault();
-
-      const target = e.target as HTMLInputElement;
-      const { checkbox, input } = this.$refs;
-
-      if (!this.stopLabelTrigger || target === checkbox || target === input) {
-        (checkbox as HTMLInputElement).click();
-      }
-    },
-    handleCheckboxClick(e: Event) {
-      e.stopPropagation();
+      // 在tree等组件中使用  阻止label触发checked 与expand冲突
+      if (this.stopLabelTrigger) e.preventDefault();
     },
     handleChange(e: Event) {
       const value = !this.checked$;
